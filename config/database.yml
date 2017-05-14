@@ -1,0 +1,13 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  socket: /tmp/mysql.sock
+
+
+development:
+  <<: *default
+  database: dyna
+  username: dyna
+  password: dyna
+  host:     localhost
