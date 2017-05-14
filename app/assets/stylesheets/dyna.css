@@ -1,0 +1,16 @@
+
+#locations_table thead > tr > th {
+  text-align: center;
+  background-color: lightgray;
+}
+#locations_table > tbody > tr > td {
+  text-align: center;
+}
+#locations_table {
+  padding-top: 20px;
+}
+
+#div_location > input[type="text"] {
+  width: 600px;
+  margin-bottom: 100px;
+}

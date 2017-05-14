@@ -1,0 +1,26 @@
+<div id="flash_messages" class="col-md-12">
+  <% if flash %>
+    <% flash.each do |message_type, message| %>
+      <% if !message.nil? %>
+        <div class="alert alert-<%= message_type %>"><%= message.html_safe %></div>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+
+<div class='container'>
+  <div id='div_location' style='margin-bottom:50px;'>
+    <h1>Locations</h1>
+    <input type="text" id='address' name="address" placeholder='Enter an address...'>
+    <button id='lookup_address'>Lookup</button>
+  </div>
+  <table id='locations_table'>
+    <thead><tr>  <th>Address</th>   <th>Longitude</th>   <th>Latitude</th> <th>Date Searched</th>  </tr></thead>
+    <tbody>
+      <% @locations.each do |loc| %>
+        <tr>  <td><%= loc.address %></td> <td><%= loc.longitude %></td> <td><%= loc.latitude %></td><td><%= loc.created_at %></td> </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
